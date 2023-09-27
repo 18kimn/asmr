@@ -1,0 +1,13 @@
+cache
+__pycache__
+.ipynb_checkpoints
+
+# artifacts produced by initial codebase
+# that shouldn't be checked into Git
+*tar.gz
+*pb
+*txt
+*jpg
+
+# beware
+.env
