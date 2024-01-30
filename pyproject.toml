@@ -28,6 +28,7 @@ dvc-gdrive = "^2.20.0"
 bs4 = "^0.0.1"
 seaborn = "^0.12.2"
 python-dotenv = "^1.0.0"
+ipykernel = "^6.27.1"
 
 
 [tool.poetry.group.dev.dependencies]

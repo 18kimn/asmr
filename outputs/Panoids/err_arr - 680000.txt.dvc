@@ -1,0 +1,5 @@
+outs:
+- md5: 23e09aee5c29056a8fa28212bfc457e7
+  size: 8216
+  hash: md5
+  path: err_arr - 680000.txt

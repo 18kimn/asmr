@@ -1,0 +1,5 @@
+outs:
+- md5: 46bef651720e2f197c32eebe0846d925
+  size: 1017
+  hash: md5
+  path: AllPoints_0.5M.py

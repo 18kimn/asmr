@@ -1,0 +1,5 @@
+outs:
+- md5: 1cc0b14b996c05f3ebb0064a4c7f3a81
+  size: 39277777
+  hash: md5
+  path: AllPoints.csv

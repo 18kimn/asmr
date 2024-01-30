@@ -1,0 +1,5 @@
+outs:
+- md5: 7b583a790d173ebf03f5b1a3e72f4bf7
+  size: 8
+  hash: md5
+  path: slurm-49153273.out
