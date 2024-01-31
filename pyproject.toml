@@ -8,7 +8,6 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 fiona = "^1.9.4.post1"
-geopandas = "^0.14.0"
 folium = "^0.14.0"
 sodapy = "^2.2.0"
 adjusttext = "^0.8"
@@ -29,6 +28,7 @@ bs4 = "^0.0.1"
 seaborn = "^0.12.2"
 python-dotenv = "^1.0.0"
 ipykernel = "^6.27.1"
+geopandas = "^0.14.2"
 
 
 [tool.poetry.group.dev.dependencies]

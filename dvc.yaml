@@ -1,0 +1,23 @@
+stages: 
+  filter_kirthi_panoids: 
+    cmd: python src/filter_panoids.py
+    deps: 
+      - src/filter_panoids.py
+    outs:
+      - outputs/filtered_panoids.csv
+  get_oxgraph:
+    cmd: python src/get_oxgraph.py inputs/Detroit_Boxes.geojson outputs/oxgraph.csv
+    deps: 
+      - src/get_oxgraph.py
+      - inputs/Detroit_Boxes.geojson
+    outs: 
+      - outputs/oxgraph.csv
+  get_queryable_points: 
+    cmd: python src/get_queryable_points.py outputs/oxgraph.csv outputs/queryable_points.csv
+    deps: 
+      - src/get_queryable_points.py
+      - outputs/oxgraph.csv
+    outs: 
+      - outputs/queryable_points.csv
+
+  # get_panoramas: 

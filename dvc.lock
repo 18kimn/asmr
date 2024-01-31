@@ -1,0 +1,46 @@
+schema: '2.0'
+stages:
+  get_oxgraph:
+    cmd: python src/get_oxgraph.py inputs/Detroit_Boxes.geojson outputs/oxgraph.csv
+    deps:
+    - path: inputs/Detroit_Boxes.geojson
+      hash: md5
+      md5: 62714d9feccf07d9a54ea3219c2b112f
+      size: 2643
+    - path: src/get_oxgraph.py
+      hash: md5
+      md5: 52b0362c3bdc69fa51afd46b667a9886
+      size: 997
+    outs:
+    - path: outputs/oxgraph.csv
+      hash: md5
+      md5: 3668887d75f9ab42eafe97edd217c7bb
+      size: 127804
+  get_queryable_points:
+    cmd: python src/get_queryable_points.py outputs/oxgraph.csv outputs/queryable_points.csv
+    deps:
+    - path: outputs/oxgraph.csv
+      hash: md5
+      md5: 3668887d75f9ab42eafe97edd217c7bb
+      size: 127804
+    - path: src/get_queryable_points.py
+      hash: md5
+      md5: a0b75926dfcfb4b16bdc612c503f370e
+      size: 619
+    outs:
+    - path: outputs/queryable_points.csv
+      hash: md5
+      md5: 96715c514d6204c5f314f96fc7adbea7
+      size: 1154147
+  filter_kirthi_panoids:
+    cmd: python src/filter_panoids.py
+    deps:
+    - path: src/filter_panoids.py
+      hash: md5
+      md5: ab4d4c6e3b95a06d074d9bb108ac3088
+      size: 1483
+    outs:
+    - path: outputs/filtered_panoids.csv
+      hash: md5
+      md5: 044798533f9048c269b598ff26c8ebca
+      size: 37777557

@@ -1,0 +1,5 @@
+outs:
+- md5: 62714d9feccf07d9a54ea3219c2b112f
+  size: 2643
+  hash: md5
+  path: Detroit_Boxes.geojson
