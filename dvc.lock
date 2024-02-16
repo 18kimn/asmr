@@ -9,20 +9,20 @@ stages:
       size: 2643
     - path: src/get_oxgraph.py
       hash: md5
-      md5: 52b0362c3bdc69fa51afd46b667a9886
-      size: 997
+      md5: e83ce043e07db1cf2e965b15daa6fd3c
+      size: 1013
     outs:
     - path: outputs/oxgraph.csv
       hash: md5
-      md5: 3668887d75f9ab42eafe97edd217c7bb
-      size: 127804
+      md5: 123bb4cf60bef4f76bf69eb2805ede63
+      size: 306194
   get_queryable_points:
     cmd: python src/get_queryable_points.py outputs/oxgraph.csv outputs/queryable_points.csv
     deps:
     - path: outputs/oxgraph.csv
       hash: md5
-      md5: 3668887d75f9ab42eafe97edd217c7bb
-      size: 127804
+      md5: 123bb4cf60bef4f76bf69eb2805ede63
+      size: 306194
     - path: src/get_queryable_points.py
       hash: md5
       md5: a0b75926dfcfb4b16bdc612c503f370e
@@ -30,8 +30,8 @@ stages:
     outs:
     - path: outputs/queryable_points.csv
       hash: md5
-      md5: 96715c514d6204c5f314f96fc7adbea7
-      size: 1154147
+      md5: b23a950f6c73cb5999ebc6107500f476
+      size: 3261350
   filter_kirthi_panoids:
     cmd: python src/filter_panoids.py
     deps:
@@ -44,3 +44,31 @@ stages:
       hash: md5
       md5: 044798533f9048c269b598ff26c8ebca
       size: 37777557
+  filter_queryable_points:
+    cmd: python src/filter_queryable_points.py inputs/Troy_MadisonHeights.geojson
+      outputs/queryable_points.csv outputs/filtered_queryable_points.csv
+    deps:
+    - path: outputs/queryable_points.csv
+      hash: md5
+      md5: b23a950f6c73cb5999ebc6107500f476
+      size: 3261350
+    - path: src/filter_queryable_points.py
+      hash: md5
+      md5: 2dfeb426e665531ee0d0bcfd9f97abcb
+      size: 591
+    outs:
+    - path: outputs/filtered_queryable_points.csv
+      hash: md5
+      md5: aaba952cb2e2dcf10d68b9a974c7bb89
+      size: 2546411
+  get_panoramas:
+    cmd: python src/get_panoramas.py outputs/filtered_queryable_points.csv outputs/panoramas
+    deps:
+    - path: outputs/filtered_queryable_points.csv
+      hash: md5
+      md5: aaba952cb2e2dcf10d68b9a974c7bb89
+      size: 2546411
+    - path: src/get_panoramas.py
+      hash: md5
+      md5: 0199e66d40855f6ad745a7c29d047c6d
+      size: 423

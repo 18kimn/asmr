@@ -19,5 +19,15 @@ stages:
       - outputs/oxgraph.csv
     outs: 
       - outputs/queryable_points.csv
-
-  # get_panoramas: 
+  filter_queryable_points:
+    cmd: python src/filter_queryable_points.py inputs/Troy_MadisonHeights.geojson outputs/queryable_points.csv outputs/filtered_queryable_points.csv
+    deps: 
+      - src/filter_queryable_points.py
+      - outputs/queryable_points.csv
+    outs: 
+      - outputs/filtered_queryable_points.csv
+  get_flats: 
+    cmd: python src/get_panoramas.py outputs/filtered_queryable_points.csv outputs/panoramas
+    deps:
+      - src/get_panoramas.py
+      - outputs/filtered_queryable_points.csv
