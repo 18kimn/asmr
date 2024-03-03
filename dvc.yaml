@@ -26,8 +26,8 @@ stages:
       - outputs/queryable_points.csv
     outs: 
       - outputs/filtered_queryable_points.csv
-  get_flats: 
-    cmd: python src/get_panoramas.py outputs/filtered_queryable_points.csv outputs/panoramas
+  get_panoramas: 
+    cmd: python src/get_panoramas.py outputs/filtered_queryable_points.csv outputs/stitched
     deps:
       - src/get_panoramas.py
       - outputs/filtered_queryable_points.csv

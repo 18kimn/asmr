@@ -54,15 +54,15 @@ stages:
       size: 3261350
     - path: src/filter_queryable_points.py
       hash: md5
-      md5: 2dfeb426e665531ee0d0bcfd9f97abcb
-      size: 591
+      md5: f852c2d7f511c7cfc20f9d8916737453
+      size: 572
     outs:
     - path: outputs/filtered_queryable_points.csv
       hash: md5
       md5: aaba952cb2e2dcf10d68b9a974c7bb89
       size: 2546411
   get_panoramas:
-    cmd: python src/get_panoramas.py outputs/filtered_queryable_points.csv outputs/panoramas
+    cmd: python src/get_panoramas.py outputs/filtered_queryable_points.csv outputs/stitched
     deps:
     - path: outputs/filtered_queryable_points.csv
       hash: md5
@@ -70,5 +70,11 @@ stages:
       size: 2546411
     - path: src/get_panoramas.py
       hash: md5
-      md5: 0199e66d40855f6ad745a7c29d047c6d
-      size: 423
+      md5: d4728cd671a6640c24b96d1b5c7ed112
+      size: 601
+    outs:
+    - path: outputs/stitched
+      hash: md5
+      md5: 356aee8ed6930d3cf05d65ecbde7e8fe.dir
+      size: 251402938
+      nfiles: 48
