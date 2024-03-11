@@ -11,11 +11,6 @@ dirname = sys.argv[2]
 if not os.path.exists(dirname):
     os.makedirs(dirname)
 
-with open("outputs/filenames.txt", "r") as file:
-    lines = file.readlines()
-
-filenames = [line.strip() for line in lines]
-
 
 def retrieve_panoramas(i, row):
     temp_folder = f"outputs/panoramas/temp/{row['panoid']}"
@@ -23,7 +18,7 @@ def retrieve_panoramas(i, row):
         os.makedirs(temp_folder)
 
     filename = f"{row['panoid']}.jpg"
-    if not os.path.exists(f"outputs/stitched/{filename}") and not filename in filenames:
+    if not os.path.exists(f"outputs/stitched/{filename}"):
         stich_tiles(row["panoid"], temp_folder, "outputs/stitched")
     shutil.rmtree(temp_folder)
 
