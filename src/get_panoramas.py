@@ -20,9 +20,9 @@ def retrieve_panoramas(i, row):
     filename = f"{row['panoid']}.jpg"
     if not os.path.exists(f"outputs/stitched/{filename}"):
         stich_tiles(row["panoid"], temp_folder, "outputs/stitched")
+        print(f"Panoid {i} scraped")
     shutil.rmtree(temp_folder)
 
-    print(f"{i} images scraped")
     return i
 
 
