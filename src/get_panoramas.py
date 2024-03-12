@@ -27,7 +27,8 @@ def retrieve_panoramas(i, row):
 
 
 if __name__ == "__main__":
-    panoids = pd.read_csv(sys.argv[1])
+    # The scraping process pulls down one image per panoid anyhow
+    panoids = pd.read_csv(sys.argv[1]).drop_duplicates("panoid")
     with cf.ThreadPoolExecutor(max_workers=8) as executor:
         future_results = [
             executor.submit(retrieve_panoramas, i, row) for i, row in panoids.iterrows()
