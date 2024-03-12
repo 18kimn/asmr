@@ -70,11 +70,5 @@ stages:
       size: 2546411
     - path: src/get_panoramas.py
       hash: md5
-      md5: d4728cd671a6640c24b96d1b5c7ed112
-      size: 601
-    outs:
-    - path: outputs/stitched
-      hash: md5
-      md5: 356aee8ed6930d3cf05d65ecbde7e8fe.dir
-      size: 251402938
-      nfiles: 48
+      md5: ad7f63c56b890366b44db939a18693bf
+      size: 1030

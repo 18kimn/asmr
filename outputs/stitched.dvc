@@ -1,0 +1,6 @@
+outs:
+- md5: 599bfcd2840f013c705b22e5653ad747.dir
+  size: 110008419662
+  nfiles: 19949
+  hash: md5
+  path: stitched
