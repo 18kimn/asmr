@@ -3,3 +3,7 @@ outs:
   size: 13584
   hash: md5
   path: err_arr - 950000.txt
+  cloud:
+    gcp:
+      etag: 08f9b1b4e2b1ef84031001
+      version_id: '1710269336983801'

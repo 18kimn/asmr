@@ -3,3 +3,7 @@ outs:
   size: 73989167
   hash: md5
   path: 0-120k.csv
+  cloud:
+    gcp:
+      etag: 08d1e8b2d9b1ef84031001
+      version_id: '1710269318083665'

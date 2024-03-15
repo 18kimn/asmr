@@ -3,3 +3,7 @@ outs:
   size: 213
   hash: md5
   path: slurm-48939290.out
+  cloud:
+    gcp:
+      etag: 08a3c6d9d9b1ef84031001
+      version_id: '1710269318718243'

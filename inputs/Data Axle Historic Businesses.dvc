@@ -1,6 +1,18 @@
 outs:
-- md5: 3536c3545174438eb152aef84b2f80a1.dir
-  size: 1455315537
-  nfiles: 2
-  hash: md5
+- hash: md5
   path: Data Axle Historic Businesses
+  files:
+  - relpath: tkabaix9xdeir06x.csv
+    md5: 71cf5d59fa68a0b84f6bce51d7c6e0b2
+    size: 1455315537
+    cloud:
+      gcp:
+        etag: 08cbc3caa8b4ef84031001
+        version_id: '1710270021018059'
+  - relpath: tkabaix9xdeir06x_csv.zip
+    md5: d41d8cd98f00b204e9800998ecf8427e
+    size: 0
+    cloud:
+      gcp:
+        etag: 08adebacc9b1ef84031001
+        version_id: '1710269284431277'

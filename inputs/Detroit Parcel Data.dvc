@@ -1,6 +1,46 @@
 outs:
-- md5: 39e54371926af43f2cd2984c80906927.dir
-  size: 435571678
-  nfiles: 6
-  hash: md5
+- hash: md5
   path: Detroit Parcel Data
+  files:
+  - relpath: Parcels.cpg
+    md5: ae3b3df9970b49b6523e608759bc957d
+    size: 5
+    cloud:
+      gcp:
+        etag: 08f2a1d186b2ef84031001
+        version_id: '1710269412954354'
+  - relpath: Parcels.dbf
+    md5: c37571f5551c5df4c53c41413798be96
+    size: 368684569
+    cloud:
+      gcp:
+        etag: 08b9c7b7bfb2ef84031001
+        version_id: '1710269532070841'
+  - relpath: Parcels.prj
+    md5: c742bee3d4edfc2948a2ad08de1790a5
+    size: 145
+    cloud:
+      gcp:
+        etag: 08d1ae9ceab1ef84031001
+        version_id: '1710269353367377'
+  - relpath: Parcels.shp
+    md5: 288f86aacbf25bfaf0a120e65b40c3be
+    size: 63835268
+    cloud:
+      gcp:
+        etag: 08a6eae4f5b1ef84031001
+        version_id: '1710269377623334'
+  - relpath: Parcels.shx
+    md5: 5a75d1978e8312fe1ac82cc4921eed1a
+    size: 3050220
+    cloud:
+      gcp:
+        etag: 08cd9187cab1ef84031001
+        version_id: '1710269285910733'
+  - relpath: Parcels.xml
+    md5: 523c7f8911776ba19883105a350fc827
+    size: 1471
+    cloud:
+      gcp:
+        etag: 08ceb49be8b1ef84031001
+        version_id: '1710269349157454'

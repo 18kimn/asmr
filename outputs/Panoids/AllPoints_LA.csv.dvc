@@ -3,3 +3,7 @@ outs:
   size: 305833605
   hash: md5
   path: AllPoints_LA.csv
+  cloud:
+    gcp:
+      etag: 0892cab396b2ef84031001
+      version_id: '1710269446022418'

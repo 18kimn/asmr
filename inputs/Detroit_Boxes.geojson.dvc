@@ -3,3 +3,7 @@ outs:
   size: 2643
   hash: md5
   path: Detroit_Boxes.geojson
+  cloud:
+    gcp:
+      etag: 08b6de96c9b1ef84031001
+      version_id: '1710269284069174'

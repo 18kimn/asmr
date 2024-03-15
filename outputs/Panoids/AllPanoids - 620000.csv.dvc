@@ -3,3 +3,7 @@ outs:
   size: 46481247
   hash: md5
   path: AllPanoids - 620000.csv
+  cloud:
+    gcp:
+      etag: 089a8cddd9b1ef84031001
+      version_id: '1710269318776346'

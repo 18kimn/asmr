@@ -1,6 +1,242 @@
 outs:
-- md5: fa534e90aa54389d7cf72d1ecf0b35d4.dir
-  size: 53402388
-  nfiles: 34
-  hash: md5
+- hash: md5
   path: ZCTA Census Data
+  files:
+  - relpath: ACSDP5Y2011.DP05-2022-09-16T171045.xlsx
+    md5: 97405496f67e57512f5a2780e91e51d3
+    size: 1451693
+    cloud:
+      gcp:
+        etag: 088196e1c9b1ef84031001
+        version_id: '1710269285288705'
+  - relpath: ACSDP5Y2020.DP05-2022-09-16T171240.csv
+    md5: 00a4e9ee0a379fdb96ad0cb49ec636f1
+    size: 1524961
+    cloud:
+      gcp:
+        etag: 08cec8d3c9b1ef84031001
+        version_id: '1710269285065806'
+  - relpath: Raw Tables/ACSDP5Y2011.DP05-Column-Metadata.csv
+    md5: de6ede930280c331e4247fca2bddd885
+    size: 54307
+    cloud:
+      gcp:
+        etag: 08d19c96bfb5ef84031001
+        version_id: '1710270336831057'
+  - relpath: Raw Tables/ACSDP5Y2011.DP05-Data.csv
+    md5: 2d0d26fcefc85e14f75ad260b5aceda9
+    size: 4167847
+    cloud:
+      gcp:
+        etag: 08fdd6f4bfb5ef84031001
+        version_id: '1710270338378621'
+  - relpath: Raw Tables/ACSDP5Y2011.DP05-Table-Notes.txt
+    md5: 25018d7672cc46c980f23b6926bd2ab1
+    size: 5729
+    cloud:
+      gcp:
+        etag: 08db8999bfb5ef84031001
+        version_id: '1710270336877787'
+  - relpath: Raw Tables/ACSDP5Y2012.DP05-Column-Metadata.csv
+    md5: b0e61880afbe8b0ee922ae61fa2c7a43
+    size: 54307
+    cloud:
+      gcp:
+        etag: 08c0fe9dbfb5ef84031001
+        version_id: '1710270336958272'
+  - relpath: Raw Tables/ACSDP5Y2012.DP05-Data.csv
+    md5: a56df5962ebd0026feca284d1237280c
+    size: 4166612
+    cloud:
+      gcp:
+        etag: 08d89ef7bfb5ef84031001
+        version_id: '1710270338420568'
+  - relpath: Raw Tables/ACSDP5Y2012.DP05-Table-Notes.txt
+    md5: aa2e3192b219b6cd19f0a8cce04293a8
+    size: 5735
+    cloud:
+      gcp:
+        etag: 08fffba6bfb5ef84031001
+        version_id: '1710270337105407'
+  - relpath: Raw Tables/ACSDP5Y2013.DP05-Column-Metadata.csv
+    md5: cd1c766486c739f418528323be012084
+    size: 61347
+    cloud:
+      gcp:
+        etag: 08d7f4a6bfb5ef84031001
+        version_id: '1710270337104471'
+  - relpath: Raw Tables/ACSDP5Y2013.DP05-Data.csv
+    md5: b9c650e36d85d3ddd754f7213db3f454
+    size: 4175080
+    cloud:
+      gcp:
+        etag: 08dbf782c0b5ef84031001
+        version_id: '1710270338612187'
+  - relpath: Raw Tables/ACSDP5Y2013.DP05-Table-Notes.txt
+    md5: e873928b2422d02b87896c635a01ae09
+    size: 5674
+    cloud:
+      gcp:
+        etag: 08a3f6a6bfb5ef84031001
+        version_id: '1710270337104675'
+  - relpath: Raw Tables/ACSDP5Y2014.DP05-Column-Metadata.csv
+    md5: 48e219f33a72e8061eba1803f8130e62
+    size: 61347
+    cloud:
+      gcp:
+        etag: 08dae7aabfb5ef84031001
+        version_id: '1710270337168346'
+  - relpath: Raw Tables/ACSDP5Y2014.DP05-Data.csv
+    md5: 23f578c0c08a744fe1aba7a9c90dedb4
+    size: 4174974
+    cloud:
+      gcp:
+        etag: 08c797f9bfb5ef84031001
+        version_id: '1710270338452423'
+  - relpath: Raw Tables/ACSDP5Y2014.DP05-Table-Notes.txt
+    md5: 1cd11ad195876a1f39cacc560e00028e
+    size: 4875
+    cloud:
+      gcp:
+        etag: 08fffd93bfb5ef84031001
+        version_id: '1710270336794367'
+  - relpath: Raw Tables/ACSDP5Y2015.DP05-Column-Metadata.csv
+    md5: 8faa12285881e9f56acfd2d567b84c6b
+    size: 63913
+    cloud:
+      gcp:
+        etag: 08a8bc96bfb5ef84031001
+        version_id: '1710270336835112'
+  - relpath: Raw Tables/ACSDP5Y2015.DP05-Data.csv
+    md5: 8e5691a03196c9721e3d8563a90456e3
+    size: 4334651
+    cloud:
+      gcp:
+        etag: 089bdafdbfb5ef84031001
+        version_id: '1710270338526491'
+  - relpath: Raw Tables/ACSDP5Y2015.DP05-Table-Notes.txt
+    md5: c97a7f18f0147abce5b7b757e7d22ddd
+    size: 5083
+    cloud:
+      gcp:
+        etag: 08c5f39ebfb5ef84031001
+        version_id: '1710270336973253'
+  - relpath: Raw Tables/ACSDP5Y2016.DP05-Column-Metadata.csv
+    md5: 2da12b3d5b0753711f4e6669e869a9aa
+    size: 63913
+    cloud:
+      gcp:
+        etag: 0894929ebfb5ef84031001
+        version_id: '1710270336960788'
+  - relpath: Raw Tables/ACSDP5Y2016.DP05-Data.csv
+    md5: 51bca14b931924cc5dd196664dda9d4f
+    size: 4334587
+    cloud:
+      gcp:
+        etag: 08b2e5febfb5ef84031001
+        version_id: '1710270338544306'
+  - relpath: Raw Tables/ACSDP5Y2016.DP05-Table-Notes.txt
+    md5: 216564c8fde46c81df3f489adc4e0d81
+    size: 5080
+    cloud:
+      gcp:
+        etag: 08ab9f94bfb5ef84031001
+        version_id: '1710270336798635'
+  - relpath: Raw Tables/ACSDP5Y2017.DP05-Column-Metadata.csv
+    md5: 66fc51fdcc31958e636b5baa058a9837
+    size: 76677
+    cloud:
+      gcp:
+        etag: 08bab3a0bfb5ef84031001
+        version_id: '1710270336997818'
+  - relpath: Raw Tables/ACSDP5Y2017.DP05-Data.csv
+    md5: 13e0239c417ffda0c9de382d1a376e66
+    size: 4608351
+    cloud:
+      gcp:
+        etag: 08d8c496c0b5ef84031001
+        version_id: '1710270338933336'
+  - relpath: Raw Tables/ACSDP5Y2017.DP05-Table-Notes.txt
+    md5: afe4a6f10bf62c03c0be993a7ad1f0a7
+    size: 5142
+    cloud:
+      gcp:
+        etag: 08b1a195bfb5ef84031001
+        version_id: '1710270336815281'
+  - relpath: Raw Tables/ACSDP5Y2018.DP05-Column-Metadata.csv
+    md5: d8c5a32b27842dcf4fadb0d862d5a1d9
+    size: 76677
+    cloud:
+      gcp:
+        etag: 08bb9697bfb5ef84031001
+        version_id: '1710270336846651'
+  - relpath: Raw Tables/ACSDP5Y2018.DP05-Data.csv
+    md5: 7ddb985d520657689e3c512afbd3154f
+    size: 4608878
+    cloud:
+      gcp:
+        etag: 08cddc81c0b5ef84031001
+        version_id: '1710270338592333'
+  - relpath: Raw Tables/ACSDP5Y2018.DP05-Table-Notes.txt
+    md5: 42d9b4811e44e5e107960875a39ab198
+    size: 5313
+    cloud:
+      gcp:
+        etag: 088cafa0bfb5ef84031001
+        version_id: '1710270336997260'
+  - relpath: Raw Tables/ACSDP5Y2019.DP05-Column-Metadata.csv
+    md5: 270d55106e85f313381a6d2dd7b25682
+    size: 75075
+    cloud:
+      gcp:
+        etag: 08d3b8a2bfb5ef84031001
+        version_id: '1710270337031251'
+  - relpath: Raw Tables/ACSDP5Y2019.DP05-Data.csv
+    md5: 6d94be1c5d7aee31d614ab605582c997
+    size: 4608191
+    cloud:
+      gcp:
+        etag: 08adae85c0b5ef84031001
+        version_id: '1710270338651949'
+  - relpath: Raw Tables/ACSDP5Y2019.DP05-Table-Notes.txt
+    md5: 37a34de58b82db839070d28ef46cded9
+    size: 4930
+    cloud:
+      gcp:
+        etag: 08c39994bfb5ef84031001
+        version_id: '1710270336797891'
+  - relpath: Raw Tables/ACSDP5Y2020.DP05-Column-Metadata.csv
+    md5: a7436317add3ee01d5616f8bbc1f31c6
+    size: 74971
+    cloud:
+      gcp:
+        etag: 088994aabfb5ef84031001
+        version_id: '1710270337157641'
+  - relpath: Raw Tables/ACSDP5Y2020.DP05-Data.csv
+    md5: d0fc8933a44f7d6b7a1a8985be1a6a0b
+    size: 4613236
+    cloud:
+      gcp:
+        etag: 08e7e5fcbfb5ef84031001
+        version_id: '1710270338511591'
+  - relpath: Raw Tables/ACSDP5Y2020.DP05-Table-Notes.txt
+    md5: 38679de36f06a3cce647422652009c5b
+    size: 5264
+    cloud:
+      gcp:
+        etag: 08c0d699bfb5ef84031001
+        version_id: '1710270336887616'
+  - relpath: productDownload_2022-09-16T131438.zip
+    md5: 50ac17d267b50dbff6ae1bd9f7c53ff4
+    size: 5917916
+    cloud:
+      gcp:
+        etag: 0886b4d1cab1ef84031001
+        version_id: '1710269287127558'
+  - relpath: selected-geo-list.csv
+    md5: ac6cd47e944f40225db7932ab78a0651
+    size: 52
+    cloud:
+      gcp:
+        etag: 08b9d0adc9b1ef84031001
+        version_id: '1710269284444217'
