@@ -31,3 +31,10 @@ stages:
     deps:
       - src/get_panoramas.py
       - outputs/filtered_queryable_points.csv
+  get_ocr: 
+    cmd: python src/get_ocr.py outputs/stitched outputs/raw_ocr.csv
+    deps: 
+      - src/get_ocr.py
+      - outputs/stitched
+    outs:
+      - outputs/raw_ocr.csv
