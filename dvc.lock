@@ -78,3 +78,20 @@ stages:
       md5: 356aee8ed6930d3cf05d65ecbde7e8fe.dir
       size: 251402938
       nfiles: 48
+  get_ocr:
+    cmd: python src/get_ocr.py outputs/stitched outputs/raw_ocr.csv
+    deps:
+    - path: outputs/stitched
+      hash: md5
+      md5: 93b97a13b6e68c051e5789536d832daf.dir
+      size: 50859388332
+      nfiles: 9426
+    - path: src/get_ocr.py
+      hash: md5
+      md5: 7878ec89697a388f5e71eed00fd449a0
+      size: 1417
+    outs:
+    - path: outputs/raw_ocr.csv
+      hash: md5
+      md5: d8eefd7c3fffba0983422865abe708e1
+      size: 2340505

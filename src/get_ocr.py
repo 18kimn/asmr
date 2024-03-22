@@ -6,7 +6,7 @@ import time
 
 import pandas as pd
 from PIL import Image
-from pytesseract import image_to_data
+from pytesseract import Output, image_to_data
 
 files = os.listdir(sys.argv[1])[:1000]
 
@@ -31,23 +31,22 @@ def get_ocr():
     def parse_file(file):
         start_time = time.time()
         with Image.open(os.path.join("outputs/stitched", file)) as img:
-            data = image_to_data(img)
-            end_time = time.time()
-            data = pd.read_csv(io.StringIO(data), sep="\t")
-            data = data[["left", "top", "width", "height", "conf", "text"]]
-            data["filename"] = file
-            data["time"] = end_time - start_time
-        return data
+            for lang in langs:
+                data = image_to_data(
+                    img, lang, output_type=Output.DATAFRAME, config="--psm 12"
+                )
+                end_time = time.time()
+                data["lang"] = lang
+                data["filename"] = file
+                data["time"] = end_time - start_time
+                data = data[data["conf"] > 70]
+                data.to_csv(f"outputs/csvs/{file}__{lang}.csv", index=False)
+        return None
 
-    data_list = []
-    with cf.ThreadPoolExecutor(max_workers=8) as executor:
+    with cf.ThreadPoolExecutor(max_workers=4) as executor:
         future_results = [executor.submit(parse_file, file) for file in files]
         for future in future_results:
-            data_list.append(future.result())
-
-    data = pd.concat(data_list)
-    data = data[data["text"].notna()]
-    data.to_csv("outputs/raw_ocr.csv", index=False)
+            print
 
 
 get_ocr()
