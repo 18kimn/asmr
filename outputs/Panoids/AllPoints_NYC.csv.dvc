@@ -3,3 +3,7 @@ outs:
   size: 8946404
   hash: md5
   path: AllPoints_NYC.csv
+  cloud:
+    gcp:
+      etag: 0888c1e1d8b1ef84031001
+      version_id: '1710269316751496'

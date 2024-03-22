@@ -16,6 +16,10 @@ stages:
       hash: md5
       md5: 123bb4cf60bef4f76bf69eb2805ede63
       size: 306194
+      cloud:
+        gcp:
+          etag: 0897a3a2c9b1ef84031001
+          version_id: '1710269284258199'
   get_queryable_points:
     cmd: python src/get_queryable_points.py outputs/oxgraph.csv outputs/queryable_points.csv
     deps:
@@ -32,6 +36,10 @@ stages:
       hash: md5
       md5: b23a950f6c73cb5999ebc6107500f476
       size: 3261350
+      cloud:
+        gcp:
+          etag: 08da9e8fcab1ef84031001
+          version_id: '1710269286043482'
   filter_kirthi_panoids:
     cmd: python src/filter_panoids.py
     deps:
@@ -44,6 +52,10 @@ stages:
       hash: md5
       md5: 044798533f9048c269b598ff26c8ebca
       size: 37777557
+      cloud:
+        gcp:
+          etag: 0898f1f7d0b1ef84031001
+          version_id: '1710269300340888'
   filter_queryable_points:
     cmd: python src/filter_queryable_points.py inputs/Troy_MadisonHeights.geojson
       outputs/queryable_points.csv outputs/filtered_queryable_points.csv
@@ -61,6 +73,10 @@ stages:
       hash: md5
       md5: aaba952cb2e2dcf10d68b9a974c7bb89
       size: 2546411
+      cloud:
+        gcp:
+          etag: 08a2b8f4c9b1ef84031001
+          version_id: '1710269285604386'
   get_panoramas:
     cmd: python src/get_panoramas.py outputs/filtered_queryable_points.csv outputs/stitched
     deps:

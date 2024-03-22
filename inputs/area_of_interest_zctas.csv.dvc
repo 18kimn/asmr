@@ -3,3 +3,7 @@ outs:
   size: 7619
   hash: md5
   path: area_of_interest_zctas.csv
+  cloud:
+    gcp:
+      etag: 08d39589c9b1ef84031001
+      version_id: '1710269283846867'

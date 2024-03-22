@@ -3,3 +3,7 @@ outs:
   size: 2965
   hash: md5
   path: Troy_MadisonHeights.geojson
+  cloud:
+    gcp:
+      etag: 08d19c97c9b1ef84031001
+      version_id: '1710269284077137'

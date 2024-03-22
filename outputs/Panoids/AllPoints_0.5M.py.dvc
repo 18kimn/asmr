@@ -3,3 +3,7 @@ outs:
   size: 1017
   hash: md5
   path: AllPoints_0.5M.py
+  cloud:
+    gcp:
+      etag: 08f594e6c9b1ef84031001
+      version_id: '1710269285370485'

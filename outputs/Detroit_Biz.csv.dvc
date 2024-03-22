@@ -3,3 +3,7 @@ outs:
   size: 325868768
   hash: md5
   path: Detroit_Biz.csv
+  cloud:
+    gcp:
+      etag: 08a2a6d9a6b2ef84031001
+      version_id: '1710269480194850'

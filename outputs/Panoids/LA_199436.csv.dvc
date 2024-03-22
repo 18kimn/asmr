@@ -3,3 +3,7 @@ outs:
   size: 291218745
   hash: md5
   path: LA_199436.csv
+  cloud:
+    gcp:
+      etag: 08e9b1e8a5b2ef84031001
+      version_id: '1710269478344937'

@@ -1,6 +1,53 @@
 outs:
-- md5: 71defef9928a0293ca069f5b9a9b30ef.dir
-  size: 822283531
-  nfiles: 7
-  hash: md5
+- hash: md5
   path: ZCTA Boundaries
+  files:
+  - relpath: tl_2021_us_zcta520/tl_2021_us_zcta520.cpg
+    md5: ae3b3df9970b49b6523e608759bc957d
+    size: 5
+    cloud:
+      gcp:
+        etag: 08f6fcf1beb5ef84031001
+        version_id: '1710270336237174'
+  - relpath: tl_2021_us_zcta520/tl_2021_us_zcta520.dbf
+    md5: d3da80b427c2284fc93aa227157499c7
+    size: 2365692
+    cloud:
+      gcp:
+        etag: 08df80bdbfb5ef84031001
+        version_id: '1710270337466463'
+  - relpath: tl_2021_us_zcta520/tl_2021_us_zcta520.prj
+    md5: 48695f70b8a1e68eceb09955b39bb489
+    size: 165
+    cloud:
+      gcp:
+        etag: 08b0a8f9beb5ef84031001
+        version_id: '1710270336357424'
+  - relpath: tl_2021_us_zcta520/tl_2021_us_zcta520.shp
+    md5: 6c880e783349b628ac6bea5d1fa1ab26
+    size: 819597556
+    cloud:
+      gcp:
+        etag: 0883e5ecdab5ef84031001
+        version_id: '1710270394872451'
+  - relpath: tl_2021_us_zcta520/tl_2021_us_zcta520.shp.ea.iso.xml
+    md5: d2ef662eccaf92d58311ecab6233b691
+    size: 15696
+    cloud:
+      gcp:
+        etag: 08928bf1beb5ef84031001
+        version_id: '1710270336222610'
+  - relpath: tl_2021_us_zcta520/tl_2021_us_zcta520.shp.iso.xml
+    md5: 38143b4f295d6cefeadbb3d291836234
+    size: 33989
+    cloud:
+      gcp:
+        etag: 08e1cefabeb5ef84031001
+        version_id: '1710270336378721'
+  - relpath: tl_2021_us_zcta520/tl_2021_us_zcta520.shx
+    md5: 9168ac42449c5cd2e154de496b5f0a39
+    size: 270428
+    cloud:
+      gcp:
+        etag: 08b2d5f2beb5ef84031001
+        version_id: '1710270336248498'

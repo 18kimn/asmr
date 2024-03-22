@@ -3,3 +3,7 @@ outs:
   size: 371
   hash: md5
   path: Panoids_0.5M.sh
+  cloud:
+    gcp:
+      etag: 089af5bbd9b1ef84031001
+      version_id: '1710269318232730'

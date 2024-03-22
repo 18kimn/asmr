@@ -32,7 +32,6 @@ geopandas = "^0.14.2"
 pytesseract = "^0.3.10"
 pillow = "^10.2.0"
 
-
 [tool.poetry.group.dev.dependencies]
 ipykernel = "^6.25.2"
 

@@ -1,6 +1,264 @@
 outs:
-- md5: 61858b1935de73c828527d9ecbbb74e4.dir
-  size: 1109964766
-  nfiles: 37
-  hash: md5
+- hash: md5
   path: NHGIS
+  files:
+  - relpath: nhgis0001_csv/nhgis0001_ds104_1980_tract.csv
+    md5: 492d3a3f5ca0b48a1e5ce3e2ea1eade7
+    size: 8750671
+    cloud:
+      gcp:
+        etag: 0880eaaac0b5ef84031001
+        version_id: '1710270339265792'
+  - relpath: nhgis0001_csv/nhgis0001_ds104_1980_tract_codebook.txt
+    md5: 9450e9c3e8a9c9673a202a4d5ac545d2
+    size: 5634
+    cloud:
+      gcp:
+        etag: 08f9cdfcbeb5ef84031001
+        version_id: '1710270336411385'
+  - relpath: nhgis0001_csv/nhgis0001_ds107_1980_tract.csv
+    md5: 338b2c6a2d55730b4e977a2f31e46028
+    size: 10861686
+    cloud:
+      gcp:
+        etag: 08acb6b9c0b5ef84031001
+        version_id: '1710270339504940'
+  - relpath: nhgis0001_csv/nhgis0001_ds107_1980_tract_codebook.txt
+    md5: 98b5f42388fd65bbfdae401143048ec1
+    size: 7124
+    cloud:
+      gcp:
+        etag: 08dd998dbfb5ef84031001
+        version_id: '1710270336683229'
+  - relpath: nhgis0001_csv/nhgis0001_ts_geog2010_data1990_zcta.csv
+    md5: 1f5ac61106d0fdea0d83f6aa62c47f80
+    size: 14479818
+    cloud:
+      gcp:
+        etag: 08b3dfe3c0b5ef84031001
+        version_id: '1710270340198323'
+  - relpath: nhgis0001_csv/nhgis0001_ts_geog2010_data1990_zcta_codebook.txt
+    md5: fdd1a3389fad0225136c1c6c73b44eca
+    size: 38454
+    cloud:
+      gcp:
+        etag: 08adb883bfb5ef84031001
+        version_id: '1710270336523309'
+  - relpath: nhgis0001_csv/nhgis0001_ts_geog2010_data2000_zcta.csv
+    md5: 97c8c1d5da97014b7b3ea2c3ec7d61cc
+    size: 14627987
+    cloud:
+      gcp:
+        etag: 08b0aec7c0b5ef84031001
+        version_id: '1710270339733296'
+  - relpath: nhgis0001_csv/nhgis0001_ts_geog2010_data2000_zcta_codebook.txt
+    md5: a481f18c9f32e65e74d71b02f1a0caaf
+    size: 44012
+    cloud:
+      gcp:
+        etag: 08b7d28bbfb5ef84031001
+        version_id: '1710270336657719'
+  - relpath: nhgis0001_csv/nhgis0001_ts_geog2010_data2010_zcta.csv
+    md5: d9df44f582fbba286de0da693834ac90
+    size: 4169003
+    cloud:
+      gcp:
+        etag: 08ecddf3bfb5ef84031001
+        version_id: '1710270338363116'
+  - relpath: nhgis0001_csv/nhgis0001_ts_geog2010_data2010_zcta_codebook.txt
+    md5: a6e817dd7353d5d7e306ef9e10fe1925
+    size: 38869
+    cloud:
+      gcp:
+        etag: 08a49285bfb5ef84031001
+        version_id: '1710270336551204'
+  - relpath: nhgis0001_csv/nhgis0002_ds250_20205_zcta_E.csv
+    md5: 20a1e40119c3a70aa1dfae0d1090e784
+    size: 7602179
+    cloud:
+      gcp:
+        etag: 0887fa9bc0b5ef84031001
+        version_id: '1710270339022087'
+  - relpath: nhgis0001_csv/nhgis0002_ds250_20205_zcta_E_codebook.txt
+    md5: 180dc96b039ad5221a424ec96de834a1
+    size: 9025
+    cloud:
+      gcp:
+        etag: 08bd888bbfb5ef84031001
+        version_id: '1710270336648253'
+  - relpath: nhgis0001_csv/nhgis0002_ds250_20205_zcta_M.csv
+    md5: 6ed011f48161c2c866c6babb43939016
+    size: 9298354
+    cloud:
+      gcp:
+        etag: 08aadca2c0b5ef84031001
+        version_id: '1710270339132970'
+  - relpath: nhgis0001_csv/nhgis0002_ds250_20205_zcta_M_codebook.txt
+    md5: 049ffcc637e0c7d734fe3735f9ff2625
+    size: 9039
+    cloud:
+      gcp:
+        etag: 0882fd82bfb5ef84031001
+        version_id: '1710270336515714'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2000_us_tract_1970/US_tract_1970.dbf
+    md5: 38e172bf86c6bf81fe855d06bc9dd83a
+    size: 2656110
+    cloud:
+      gcp:
+        etag: 0890f6f0bfb5ef84031001
+        version_id: '1710270338317072'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2000_us_tract_1970/US_tract_1970.prj
+    md5: b9df0a0e0e067cde9c09e43aad4b0a23
+    size: 467
+    cloud:
+      gcp:
+        etag: 08a8d9b6bfb5ef84031001
+        version_id: '1710270337363112'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2000_us_tract_1970/US_tract_1970.sbn
+    md5: fb457beafe99219378570a48b9aa4de5
+    size: 346772
+    cloud:
+      gcp:
+        etag: 08dbe8b7bfb5ef84031001
+        version_id: '1710270337381467'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2000_us_tract_1970/US_tract_1970.sbx
+    md5: 6ad1c63cce76b1efa76b270a718a3cd2
+    size: 9732
+    cloud:
+      gcp:
+        etag: 08c794afbfb5ef84031001
+        version_id: '1710270337239623'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2000_us_tract_1970/US_tract_1970.shp
+    md5: e80fd74104d40c8b8a318bb3db98d2a5
+    size: 73816020
+    cloud:
+      gcp:
+        etag: 08a4f482c3b5ef84031001
+        version_id: '1710270344903204'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2000_us_tract_1970/US_tract_1970.shp.xml
+    md5: 7585cec1b51bf59bde71f52704338260
+    size: 44688
+    cloud:
+      gcp:
+        etag: 08ddedb3bfb5ef84031001
+        version_id: '1710270337316573'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2000_us_tract_1970/US_tract_1970.shx
+    md5: b3816472eb3adc8472661cf6463808b2
+    size: 276036
+    cloud:
+      gcp:
+        etag: 088be0b9bfb5ef84031001
+        version_id: '1710270337413131'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2000_us_tract_1970/US_tractcounty_1970.dbf
+    md5: 1fe37fbba1fdec8312654ebfbdf91fac
+    size: 1009346
+    cloud:
+      gcp:
+        etag: 08aa8bd1bfb5ef84031001
+        version_id: '1710270337795498'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2000_us_tract_1970/US_tractcounty_1970.prj
+    md5: b9df0a0e0e067cde9c09e43aad4b0a23
+    size: 467
+    cloud:
+      gcp:
+        etag: 089dc9babfb5ef84031001
+        version_id: '1710270337426589'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2000_us_tract_1970/US_tractcounty_1970.sbn
+    md5: 2948ddefa4280eede9cb953666bb3f29
+    size: 30620
+    cloud:
+      gcp:
+        etag: 08c8edaabfb5ef84031001
+        version_id: '1710270337169096'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2000_us_tract_1970/US_tractcounty_1970.sbx
+    md5: d2aff2099dd5efee3fbb312e7497df1e
+    size: 2300
+    cloud:
+      gcp:
+        etag: 08ac8faebfb5ef84031001
+        version_id: '1710270337222572'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2000_us_tract_1970/US_tractcounty_1970.shp
+    md5: 3152777fe1d5296b7a1f850d952a8109
+    size: 78664104
+    cloud:
+      gcp:
+        etag: 08ea95d0c2b5ef84031001
+        version_id: '1710270344071914'
+  - relpath: 
+      nhgis0001_shape/nhgis0001_shapefile_tl2000_us_tract_1970/US_tractcounty_1970.shp.xml
+    md5: e9b4e5282fb076bcd4c2eb94cd219866
+    size: 69056
+    cloud:
+      gcp:
+        etag: 0885feb7bfb5ef84031001
+        version_id: '1710270337384197'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2000_us_tract_1970/US_tractcounty_1970.shx
+    md5: 633bae27ee3318eba133b64f76801833
+    size: 24932
+    cloud:
+      gcp:
+        etag: 08b2adb4bfb5ef84031001
+        version_id: '1710270337324722'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2020_us_zcta_2020/US_zcta_2020.GISJOIN.atx
+    md5: 4b42bec09fbe4050ac742dc01a97a2b0
+    size: 421888
+    cloud:
+      gcp:
+        etag: 08a4c8cabfb5ef84031001
+        version_id: '1710270337688612'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2020_us_zcta_2020/US_zcta_2020.cpg
+    md5: ae3b3df9970b49b6523e608759bc957d
+    size: 5
+    cloud:
+      gcp:
+        etag: 08f686c3bfb5ef84031001
+        version_id: '1710270337565558'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2020_us_zcta_2020/US_zcta_2020.dbf
+    md5: 3afdc5fa8c000d8cc5c99f54e420dfda
+    size: 4188394
+    cloud:
+      gcp:
+        etag: 08defa88c0b5ef84031001
+        version_id: '1710270338710878'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2020_us_zcta_2020/US_zcta_2020.prj
+    md5: b9df0a0e0e067cde9c09e43aad4b0a23
+    size: 467
+    cloud:
+      gcp:
+        etag: 08a58dc0bfb5ef84031001
+        version_id: '1710270337517221'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2020_us_zcta_2020/US_zcta_2020.sbn
+    md5: 9c0b67e881c97e593e6b9bde34bca24c
+    size: 343404
+    cloud:
+      gcp:
+        etag: 0890d9cabfb5ef84031001
+        version_id: '1710270337690768'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2020_us_zcta_2020/US_zcta_2020.sbx
+    md5: 02ac47c37a256fbb1d909f9d25f24b72
+    size: 9748
+    cloud:
+      gcp:
+        etag: 088f9ebcbfb5ef84031001
+        version_id: '1710270337453839'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2020_us_zcta_2020/US_zcta_2020.shp
+    md5: 18595def0a5c452ed4e389ba282c5b9c
+    size: 877810172
+    cloud:
+      gcp:
+        etag: 08c390f3dfb5ef84031001
+        version_id: '1710270405462083'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2020_us_zcta_2020/US_zcta_2020.shp.xml
+    md5: 717d0a912fb4b6638e69a802a7c14fb6
+    size: 27891
+    cloud:
+      gcp:
+        etag: 089080c1bfb5ef84031001
+        version_id: '1710270337531920'
+  - relpath: nhgis0001_shape/nhgis0001_shapefile_tl2020_us_zcta_2020/US_zcta_2020.shx
+    md5: 3eb478d91e0262af0c4110ebad7381c8
+    size: 270292
+    cloud:
+      gcp:
+        etag: 089194c5bfb5ef84031001
+        version_id: '1710270337600017'
