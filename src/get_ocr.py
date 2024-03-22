@@ -29,6 +29,9 @@ langs = [
 
 def get_ocr():
     def parse_file(file):
+        if os.path.exists(os.path.join(f"outputs/csvs/{file}__en.csv")):
+            return None
+
         start_time = time.time()
         with Image.open(os.path.join("outputs/stitched", file)) as img:
             for lang in langs:
@@ -45,8 +48,8 @@ def get_ocr():
 
     with cf.ThreadPoolExecutor(max_workers=4) as executor:
         future_results = [executor.submit(parse_file, file) for file in files]
-        for future in future_results:
-            print
+        for i, _ in future_results:
+            print("{i}th photo parsed")
 
 
 get_ocr()
