@@ -20,7 +20,7 @@ stages:
     outs: 
       - outputs/queryable_points.csv
   filter_queryable_points:
-    cmd: python src/filter_queryable_points.py inputs/Troy_MadisonHeights.geojson outputs/queryable_points.csv outputs/filtered_queryable_points.csv
+    cmd: python src/filter_queryable_points.py inputs/madison_heights_strip_mall.geojson outputs/queryable_points.csv outputs/filtered_queryable_points.csv
     deps: 
       - src/filter_queryable_points.py
       - outputs/queryable_points.csv
@@ -32,9 +32,10 @@ stages:
       - src/get_panoramas.py
       - outputs/filtered_queryable_points.csv
   get_ocr: 
-    cmd: python src/get_ocr.py outputs/stitched outputs/raw_ocr.csv
+    cmd: python src/get_ocr.py outputs/stitched outputs/filtered_queryable_points.csv outputs/raw_ocr.csv
     deps: 
       - src/get_ocr.py
-      - outputs/stitched
+      - outputs/filtered_queryable_points.csv
+      - get_panoramas
     outs:
       - outputs/raw_ocr.csv

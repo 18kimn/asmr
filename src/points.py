@@ -170,8 +170,8 @@ def download_tiles(tiles, directory, disp=False):
             try:
                 response = requests.get(url, stream=True)
                 break
-            except requests.ConnectionError:
-                print("Connection error. Trying again in 2 seconds.")
+            except requests.exceptions.RequestException as e:
+                print(f"Connection error: {e}. Trying again in 2 seconds.")
                 time.sleep(2)
         with open(directory + "/" + fname, "wb") as out_file:
             shutil.copyfileobj(response.raw, out_file)

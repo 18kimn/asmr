@@ -13,3 +13,7 @@ __pycache__
 .env
 
 temp
+.Rproj.user
+
+outputs/stitched_archive
+outputs/csvs_archive

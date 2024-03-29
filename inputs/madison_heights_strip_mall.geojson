@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "madison_heights_strip_mall",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -83.111977320631524, 42.534395483862369 ], [ -83.111624815760379, 42.527044102424895 ], [ -83.103658205672573, 42.526953178863344 ], [ -83.104239838709972, 42.534577309186801 ], [ -83.111977320631524, 42.534395483862369 ] ] ] } }
+]
+}

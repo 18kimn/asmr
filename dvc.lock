@@ -57,7 +57,7 @@ stages:
           etag: 0898f1f7d0b1ef84031001
           version_id: '1710269300340888'
   filter_queryable_points:
-    cmd: python src/filter_queryable_points.py inputs/Troy_MadisonHeights.geojson
+    cmd: python src/filter_queryable_points.py inputs/madison_heights_strip_mall.geojson
       outputs/queryable_points.csv outputs/filtered_queryable_points.csv
     deps:
     - path: outputs/queryable_points.csv
@@ -71,12 +71,8 @@ stages:
     outs:
     - path: outputs/filtered_queryable_points.csv
       hash: md5
-      md5: aaba952cb2e2dcf10d68b9a974c7bb89
-      size: 2546411
-      cloud:
-        gcp:
-          etag: 08a2b8f4c9b1ef84031001
-          version_id: '1710269285604386'
+      md5: 42bcdc4a2d6bded376a22e5dae1ed7f2
+      size: 435239
   get_panoramas:
     cmd: python src/get_panoramas.py outputs/filtered_queryable_points.csv outputs/stitched
     deps:
