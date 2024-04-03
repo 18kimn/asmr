@@ -11,9 +11,11 @@ __pycache__
 
 # beware
 .env
+.Renviron
 
 temp
 .Rproj.user
+.Rhistory
 
 outputs/stitched_archive
 outputs/csvs_archive

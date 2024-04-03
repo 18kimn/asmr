@@ -50,7 +50,7 @@ def get_ocr():
         for file in files:
             parse_file(file)
 
-    num_processes = 7
+    num_processes = multiprocessing.cpu_count() - 2
     chunk_size = len(files) // num_processes
     chunks = [files[i : i + chunk_size] for i in range(0, len(files), chunk_size)]
 
