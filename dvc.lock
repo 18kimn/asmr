@@ -73,6 +73,10 @@ stages:
       hash: md5
       md5: 42bcdc4a2d6bded376a22e5dae1ed7f2
       size: 435239
+      cloud:
+        gcp:
+          etag: 08fda0e4e0afa785031001
+          version_id: '1712192942051453'
   get_panoramas:
     cmd: python src/get_panoramas.py outputs/filtered_queryable_points.csv outputs/stitched
     deps:
@@ -91,13 +95,11 @@ stages:
       size: 251402938
       nfiles: 48
   get_ocr:
-    cmd: python src/get_ocr.py outputs/stitched outputs/raw_ocr.csv
+    cmd: python src/get_ocr.py outputs/stitched outputs/filtered_queryable_points.csv
+      outputs/raw_ocr.csv
     deps:
-    - path: outputs/stitched
-      hash: md5
-      md5: 93b97a13b6e68c051e5789536d832daf.dir
-      size: 50859388332
-      nfiles: 9426
+    - path: get_panoramas
+    - path: outputs/filtered_queryable_points.csv
     - path: src/get_ocr.py
       hash: md5
       md5: 7878ec89697a388f5e71eed00fd449a0
@@ -107,3 +109,7 @@ stages:
       hash: md5
       md5: d8eefd7c3fffba0983422865abe708e1
       size: 2340505
+      cloud:
+        gcp:
+          etag: 08d29e8de0afa785031001
+          version_id: '1712192940625746'
