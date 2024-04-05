@@ -36,6 +36,5 @@ stages:
     deps: 
       - src/get_ocr.py
       - outputs/filtered_queryable_points.csv
-      - get_panoramas
     outs:
       - outputs/raw_ocr.csv
