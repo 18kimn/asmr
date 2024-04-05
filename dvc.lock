@@ -98,7 +98,6 @@ stages:
     cmd: python src/get_ocr.py outputs/stitched outputs/filtered_queryable_points.csv
       outputs/raw_ocr.csv
     deps:
-    - path: get_panoramas
     - path: outputs/filtered_queryable_points.csv
     - path: src/get_ocr.py
       hash: md5
