@@ -1,0 +1,5 @@
+outs:
+- md5: 5d722429ec1b2b7f04ae52fb60538fe8
+  size: 109813
+  hash: md5
+  path: colors.csv

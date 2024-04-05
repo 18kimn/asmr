@@ -1,0 +1,203 @@
+---
+title: "figures"
+output: github_document
+date: "2024-04-05"
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(knitr)
+library(sf)
+library(mapboxapi)
+library(ggspatial)
+
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+opts_knit$set(root.dir = rprojroot::find_rstudio_root_file())
+
+```
+
+```{r cleanup}
+langs <- tribble(
+  ~lang_short, ~lang_long,
+  "kor", "Korean",
+  "tgl", "Tagalog",
+  "eng", "English",
+  "vie", "Vietnamese",
+  "jpn", "Japanese",
+  "chi_sim", "Simplified Chinese",
+  "ben", "Bengali",
+  "urd", "Urdu"
+)
+panoids <- read_csv("outputs/filtered_queryable_points.csv") |> 
+  select(panoid, lat, lon)
+
+ocr <- read_csv("outputs/ocr.csv") |> 
+  drop_na(text) |> 
+  mutate(panoid = str_remove(basename(filename), ".jpg")) |> 
+  left_join(panoids, by = "panoid") |> 
+  mutate(
+    text = str_remove_all(text, "[\\.',・\\-/\\\\=﹒\\(\\)\\+]") |> 
+      str_remove_all("\\p{N}")
+  ) |> 
+  filter(
+    nchar(text) > 2,
+    # Just keep anything that has no numbers
+    is.na(as.numeric(text)) 
+  ) |> 
+  mutate(lang = as.factor(lang) |> 
+           fct_relevel("eng"),
+         # If text is in Latin -> English
+         lang = if_else(str_detect(text, "\\P{Latin}"), lang, "eng")) |> 
+  # Ensure text is captured only once per panorama
+  group_by(text, filename) |> 
+  slice_head(n = 1) |> 
+  # For some reason all of that creates duplicates lmfao 
+  distinct() |> 
+  mutate(
+    lon_copy = lon,
+    lat_copy = lat,
+  ) |> 
+  st_as_sf(coords = c('lon', 'lat')) |> 
+  st_set_crs(4326) |> 
+  left_join(langs, by = c("lang" = "lang_short"))
+write_csv(st_drop_geometry(ocr), "outputs/clean_ocr.csv")
+
+colors <- read_csv("outputs/colors.csv")
+```
+
+# Figure 1: Polygons to illustrate region of study
+
+```{r fig1}
+main_outline <- st_read("inputs/Detroit_Boxes.geojson", quiet = TRUE)
+madheights <- st_read("inputs/madison_heights_strip_mall.geojson", quiet = TRUE)
+
+filtered_queryable_points <- read_csv("outputs/filtered_queryable_points.csv") |> 
+  st_as_sf(coords = c("lon", "lat")) |> 
+  st_set_crs(st_crs(madheights))
+queryable_points <- read_csv("outputs/queryable_points.csv") |> 
+  st_as_sf(coords = c("lon", "lat")) |> 
+  st_set_crs(st_crs(madheights))
+
+make_map <- function(input, zoom = 15, buffer_dist = 100, ...){
+  tiles <- get_static_tiles(
+    location = st_bbox(input),
+    zoom = zoom,
+    buffer_dist = buffer_dist,
+    style_url = "mapbox://styles/18kimn/cluc3xqxi02bg01qq6wm55qq4"
+  )
+  
+  ggplot(input) + 
+    layer_spatial(tiles) + 
+    geom_sf(...) + 
+    theme_void() 
+}
+
+outline_plot <- make_map(main_outline, 11, buffer_dist = 1000)
+outline_plot
+```
+
+# Figure 1a: 
+
+```{r fig1a}
+madheights_plot <- make_map(madheights, fill = NA)
+madheights_plot
+```
+
+# Figure 1b:
+
+```{r fig1b}
+madheights_points_plot <- make_map(madheights, fill = NA) + 
+  geom_sf(data = filtered_queryable_points, size = 0.1)
+madheights_points_plot
+```
+
+# Figure 2: Example Panoid with text box highlights to show recognition
+
+```{r fig2}
+
+```
+
+# Figure 3: Heatmap by detected language
+
+```{r fig1c}
+
+
+add_lang <- function(lang_opt){
+  stat_density_2d(data = filter(ocr, lang == lang_opt),
+                    geom= "tile", contour = FALSE,
+                    aes(x = lon_copy, y = lat_copy, 
+                        fill = lang, alpha = (..density..)))
+}
+ggplot() + 
+  stat_density_2d(data = ocr, 
+                    geom= "tile", contour = FALSE,
+                    aes(x = lon_copy, y = lat_copy, 
+                        fill = lang, alpha = (..density..))) +
+  add_lang("chi_sim") + 
+  add_lang("eng") 
+
+make_map(ocr, 15,
+         mapping = aes(color = lang_long),
+         size = 0.7, alpha = 0.5) +  
+  scale_color_brewer(type = "qual", palette = "Set1") + 
+  labs(
+    color = NULL
+  ) 
+  
+  
+```
+
+# Figure 4: Figure 3, with detected colors
+
+For now -- just trying to wrap my head around how a continuous color space can be 
+represented in an interpretable manner.
+
+```{r}
+
+colors |> 
+  mutate(
+    hsv = map(color, \(col){
+      color <- rgb2hsv(col2rgb(col))
+    tibble(
+      hue = color[1],
+      saturation = color[2],
+      value = color[3]
+    )
+    }
+  )) |> 
+  unnest(hsv) |> 
+  arrange(hue, saturation, value) |> 
+  mutate(index = 1:n()) |> 
+  ggplot() + 
+  geom_rect(aes(xmin = index, xmax = index + 1, ymin = 0, ymax = 10, 
+                fill = color)) +
+  scale_fill_identity()
+
+```
+
+
+# Table 1: Summary stats of OCR
+
+```{r}
+
+ocr |> 
+  st_drop_geometry() |> 
+  group_by(lang) |> 
+  summarize(
+    `Recognized phrases` = n(),
+    `Average length of phrase` = mean(nchar(text)),
+    `Number of panoramas with recognized text` = length(unique(filename)),
+    `Average confidence in recognition` = mean(conf),
+    `Average area in image` = mean(width * height),
+  ) |> 
+  kable()
+
+```
+
+# Table 2: Summary stats of color analyses
+
+```{r}
+
+
+
+```

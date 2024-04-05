@@ -1,0 +1,5 @@
+outs:
+- md5: 8d19c79fa3bd8ee360d17ffe0d84830a
+  size: 102553
+  hash: md5
+  path: clean_ocr.csv
