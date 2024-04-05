@@ -176,16 +176,38 @@ colors |>
 ```
 
 
-# Table 1: Summary stats of OCR
+# Table 1: Summary stats
+
+```{r}
+n_images <- list.files("outputs/stitched") |> length()
+n_ocr <- ocr$panoid |> unique() |> length()
+n_original_phrases <- read_csv("outputs/ocr.csv") |> 
+  nrow()
+
+n_current_phrases <- nrow(ocr)
+
+tribble(
+  ~Statistic, ~Value,
+  "Number of scraped images for bounding box", n_images,
+  "Number processed via OCR so far", n_ocr,
+  "Total number of phrases identified", n_original_phrases,
+  "Total number of phrases after filtering", n_current_phrases
+) |> 
+  kable()
+
+
+```
+
+# Table 2: Summary stats of OCR by language
 
 ```{r}
 
 ocr |> 
   st_drop_geometry() |> 
-  group_by(lang) |> 
+  group_by(language = lang_long) |> 
   summarize(
     `Recognized phrases` = n(),
-    `Average length of phrase` = mean(nchar(text)),
+    `Average length of phrase (characters)` = mean(nchar(text)),
     `Number of panoramas with recognized text` = length(unique(filename)),
     `Average confidence in recognition` = mean(conf),
     `Average area in image` = mean(width * height),
