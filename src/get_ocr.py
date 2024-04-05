@@ -16,7 +16,6 @@ langs = [
     "chi_sim",
     "kor",
     "jpn",
-    "tgl",
     "vie",
     "urd",
     "ben",
