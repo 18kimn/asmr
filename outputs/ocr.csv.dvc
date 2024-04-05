@@ -1,0 +1,5 @@
+outs:
+- md5: e9e0783dcf2393686740e52b27f98898
+  size: 6127753
+  hash: md5
+  path: ocr.csv
